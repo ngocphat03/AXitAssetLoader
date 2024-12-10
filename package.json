@@ -1,0 +1,18 @@
+﻿{
+    "name": "com.axit.assetloader",
+    "version": "1.0.0",
+    "displayName": "AXit Asset Loader",
+    "description": "AXit Asset Loader is a Unity package designed to streamline the management and loading of game assets. It provides a flexible system for loading and unloading assets, supporting both Addressables and traditional Resource loading methods. The package is structured with a modular design that allows easy integration into Unity projects, enabling efficient asset management across various use cases. This tool is ideal for developers looking to implement a scalable asset loading system with support for both synchronous and asynchronous operations.",
+    "unity": "2019.1",
+    "unityRelease": "0b5",
+    "documentationUrl": "https://github.com/ngocphat03/AXitAssetLoader/blob/release/README.md",
+    "changelogUrl": "https://github.com/ngocphat03/AXitAssetLoader/blob/release/CHANGELOG.md",
+    "licensesUrl": "https://github.com/ngocphat03/AXitAssetLoader/blob/release/LICENSE.md",
+    "dependencies": {},
+    "keywords": [],
+    "author": {
+        "name": "AXit",
+        "email": "ngonngocphat@gmail.com",
+        "url": "https://github.com/ngocphat03/AXitAssetLoader"
+    }
+}
