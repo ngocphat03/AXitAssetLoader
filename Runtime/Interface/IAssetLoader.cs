@@ -1,4 +1,4 @@
-namespace AXitUnityTemplate.AssetLoader.Runtime.Scripts.Interfaces
+namespace AXitUnityTemplate.AssetLoader.Runtime.Interface
 {
     using UnityEngine;
 

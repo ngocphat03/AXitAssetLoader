@@ -1,10 +1,10 @@
 ﻿#if !ADDRESSABLES_ASSET_LOADED
-namespace AXitUnityTemplate.AssetLoader.Runtime.Scripts.Loader
+namespace AXitUnityTemplate.AssetLoader.Runtime.Loader
 {
     using UnityEngine;
     using System.Collections.Generic;
-    using AXitUnityTemplate.AssetLoader.Runtime.Scripts.Utilities;
-    using AXitUnityTemplate.AssetLoader.Runtime.Scripts.Interfaces;
+    using AXitUnityTemplate.AssetLoader.Runtime.Interface;
+    using AXitUnityTemplate.AssetLoader.Runtime.Utilities;
 
     public class ResourceAssetLoader : IAssetLoader
     {

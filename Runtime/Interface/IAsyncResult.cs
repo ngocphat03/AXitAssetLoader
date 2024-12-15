@@ -1,7 +1,7 @@
-﻿namespace AXitUnityTemplate.AssetLoader.Runtime.Scripts.Interfaces
+﻿namespace AXitUnityTemplate.AssetLoader.Runtime.Interface
 {
 
-    public interface IAsyncResult<T>
+    public interface IAsyncResult<out T>
     {
         public T GetResult();
 
@@ -12,7 +12,7 @@
 #else
         public System.Collections.IEnumerator ToCoroutine(System.Action<T> onComplete = null)
         {
-            return ToCoroutineInternal(this, onComplete);
+            return IAsyncResult<T>.ToCoroutineInternal(this, onComplete);
         }
 
         private static System.Collections.IEnumerator ToCoroutineInternal(IAsyncResult<T> asyncResult, System.Action<T> onComplete = null)

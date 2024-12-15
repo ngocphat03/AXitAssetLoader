@@ -1,17 +1,16 @@
 ﻿#if ADDRESSABLES_ASSET_LOADED
-namespace AXitUnityTemplate.AssetLoader.Runtime.Scripts.Loader
+namespace AXitUnityTemplate.AssetLoader.Runtime.Loader
 {
-    using UnityEngine;
-    using System.Collections.Generic;
-    using UnityEngine.AddressableAssets;
-    using AXitUnityTemplate.AssetLoader.Runtime.Scripts.Utilities;
-    using AXitUnityTemplate.AssetLoader.Runtime.Scripts.Interfaces;
-
 #if UNITASK
     using Cysharp.Threading.Tasks;
 #else
     using UnityEngine.ResourceManagement.AsyncOperations;
 #endif
+    using UnityEngine;
+    using System.Collections.Generic;
+    using UnityEngine.AddressableAssets;
+    using AXitUnityTemplate.AssetLoader.Runtime.Interface;
+    using AXitUnityTemplate.AssetLoader.Runtime.Utilities;
 
     public class AddressableAssetLoader : IAssetLoader
     {

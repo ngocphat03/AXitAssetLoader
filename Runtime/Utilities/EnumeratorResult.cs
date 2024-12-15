@@ -1,9 +1,8 @@
 ﻿#if !UNITASK
-namespace AXitUnityTemplate.AssetLoader.Runtime.Scripts.Utilities
+namespace AXitUnityTemplate.AssetLoader.Runtime.Utilities
 {
-    
     using System.Collections;
-    using AXitUnityTemplate.AssetLoader.Runtime.Scripts.Interfaces;
+    using AXitUnityTemplate.AssetLoader.Runtime.Interface;
 
     public class EnumeratorResult<T> : IAsyncResult<T>
     {
