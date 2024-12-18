@@ -1,7 +1,7 @@
 ﻿namespace AXitUnityTemplate.AssetLoader.Runtime.Interface
 {
 
-    public interface IAsyncResult<out T>
+    public interface IAsyncResult<T>
     {
         public T GetResult();
 

@@ -1,8 +1,8 @@
 ﻿#if UNITASK
-namespace AXitUnityTemplate.AssetLoader.Runtime.Scripts.Utilities
+namespace AXitUnityTemplate.AssetLoader.Runtime.Utilities
 {
     using Cysharp.Threading.Tasks;
-    using AXitUnityTemplate.AssetLoader.Runtime.Scripts.Interfaces;
+    using AXitUnityTemplate.AssetLoader.Runtime.Interface;
 
     public class UniTaskResult<T> : IAsyncResult<T>
     {

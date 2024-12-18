@@ -14,11 +14,11 @@ namespace AXitUnityTemplate.AssetLoader.Runtime.Installer
         public void Install()
         {
 #if ADDRESSABLES_ASSET_LOADED
-            DependencyLocator.AssetLoader = new AddressableAssetLoader();
             this.Container.Bind<IAssetLoader>().To<AddressableAssetLoader>();
+            DependencyLocator.AssetLoader = this.Container.Resolve<AddressableAssetLoader>();
 #else
-            DependencyLocator.AssetLoader = new ResourceAssetLoader();
-            this.Container.Bind<IAssetLoader>().To<ResourceAssetLoader>();
+            this.Container.Bind<IAssetLoader>().To<ResourceAssetLoader>().AsCached();
+            DependencyLocator.AssetLoader = this.Container.Resolve<IAssetLoader>();
 #endif
         }
     }
