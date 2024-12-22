@@ -11,11 +11,12 @@ namespace AXitUnityTemplate.AssetLoader.Runtime.Loader
     using UnityEngine.AddressableAssets;
     using AXitUnityTemplate.AssetLoader.Runtime.Interface;
     using AXitUnityTemplate.AssetLoader.Runtime.Utilities;
+    using UnityEngine.ResourceManagement.ResourceProviders;
 
     public class AddressableAssetLoader : IAssetLoader
     {
         private readonly Dictionary<string, Object> loadedAssets = new(20);
-
+        
         public IAsyncResult<T> LoadAssetAsync<T>(string key) where T : Object
         {
 #if UNITASK
@@ -72,11 +73,14 @@ namespace AXitUnityTemplate.AssetLoader.Runtime.Loader
             if (this.loadedAssets.Remove(key, out var asset))
             {
                 Addressables.Release(asset);
+
                 return;
-            }    
+            }
 
             Debug.LogError($"Asset with key: {key} is not loaded.");
         }
+
+        public async UniTask<SceneInstance> LoadSceneAsync(string key, bool active = true) { return await Addressables.LoadSceneAsync(key, activateOnLoad: active); }
     }
 }
 #endif

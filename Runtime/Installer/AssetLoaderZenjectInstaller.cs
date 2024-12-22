@@ -14,8 +14,8 @@ namespace AXitUnityTemplate.AssetLoader.Runtime.Installer
         public void Install()
         {
 #if ADDRESSABLES_ASSET_LOADED
-            this.Container.Bind<IAssetLoader>().To<AddressableAssetLoader>();
-            DependencyLocator.AssetLoader = this.Container.Resolve<AddressableAssetLoader>();
+            this.Container.Bind<IAssetLoader>().To<AddressableAssetLoader>().AsCached();
+            DependencyLocator.AssetLoader = this.Container.Resolve<IAssetLoader>();
 #else
             this.Container.Bind<IAssetLoader>().To<ResourceAssetLoader>().AsCached();
             DependencyLocator.AssetLoader = this.Container.Resolve<IAssetLoader>();
